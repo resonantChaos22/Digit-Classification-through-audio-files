@@ -1,2 +1,5 @@
 # Digit-Classification-through-audio-files
-Classification of digits based on the audio of them
+There are 2000 audio files in which 4 people have spoken a digit in a file 50 times.
+I created training set of 3 persons and the test set of the fourth person.
+I converted the audi file into 128 mfc constants and then feeded the array(tensor) into a neural network with two hidden layers.
+
