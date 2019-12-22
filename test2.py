@@ -189,17 +189,7 @@ with torch.no_grad():
     print('Accuracy - {}%'.format((correct1/total)*100))
     print('Accuracy - {}%'.format((correct2/total)*100))
 
-d, sr = librosa.load('one.wav')
-xd = np.mean(librosa.feature.mfcc(y=d, sr=sr, n_mfcc=128).T, axis=0)
-xd = Variable(torch.from_numpy(xd)).to(device).float()
-yd = model(xd)
-_, pred = torch.max(yd.data, 0)
-print(pred)
 
-torch.save(model, 'model1.ckpt')   
-
-   
-#torch.save(model.state_dict(), 'model.ckpt')
     
         
 
